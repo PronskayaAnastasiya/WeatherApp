@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <title>Responsive Weather App</title>
+</head>
+<body>
+    <main>
+        <h1>Погодное приложение, работающее на базе A P I</h1>
+        <section id="searchBar" class="searchBar">
+            <form id="searchBar__form" class="searchBar__form" role="search">
+                <label for="searchBar__text">Введите местоположение</label>
+                <input id="searchBar__text" class="searchBar__text" type="text" role="searchbox" size="40" 
+                autocomplete="off" placeholder="Страна, область, город">
+                <button id="searchBar__button" class="searchBar__button" title="Отправить местоположение" 
+                aria-label="Ввести почтовый индекс или страну, область, город, чтобы получить погодные условия">
+                    <i class="fa fa-search"></i>
+                    <i class="fas fa-sync fa-spin"></i>
+                </button>
+            </form>
+        </section>
+        <a href="#currentForecast" class="skip-link">Перейти к текущим погодным условиям</a>
+        <section id="currentForecast" class="currentForecast" role="region" aria-labelledby="currentForecast__location">
+            <h2 id="currentForecast__location" class="currentForecast__location">Текущая погода</h2>
+            <div id="currentForecast__conditions" class="currentForecast__conditions"></div>
+        </section>
+        <a href="#dailyForecast" class="skip-link">Перейти к прогнозу погоды на неделю</a>
+        <nav id="navButtons" class="navButtons">
+            <button id="getLocation" class="button" title="Получить местоположение" aria-label="Получить текущие погодные условия для вашего текущего местоположения">
+                <i class="fas  fa-map-marker-alt"></i>
+                <i class="fas fa-sync fa-spin"></i>
+            </button>
+            <button id="home" class="button" title="Домашнее местоположение" aria-label="Получить текущие погодные условия для вашего домашнего местоположения">
+                <i class="fas  fa-home"></i>
+                <i class="fas fa-sync fa-spin"></i>
+            </button>
+            <button id="saveLocation" class="button" title="Сохранить местоположение" aria-label="Сохранить текущее местоположение в качестве домашнего местоположения">
+                <i class="fas  fa-save"></i>
+                <i class="fas fa-sync fa-spin"></i>
+            </button>
+            <button id="unit" class="button" title="Переключить единицы измерения" aria-label="Переключение между еденицами измерения ">
+                <i class="fas  fa-chart-bar"></i>
+                <i class="fas fa-sync fa-spin"></i>
+            </button>
+             <button id="refresh" class="button" title="Обновить погоду" aria-label="Обнавляет текущие погодные условия">
+                <i class="fas  fa-sync-alt"></i>
+                <i class="fas fa-sync fa-spin"></i>
+            </button>
+        </nav>
+        <hr>
+        <section id="dailyForecast" class="dailyForecast" role="region" aria-labelledby="dailyForecast__title">
+            <h2 id="dailyForecast__title" class="dailyForecast__title">Шестидневный прогноз</h2>
+            <div id="dailyForecast__contents" class="dailyForecast__contents"></div>
+        </section>
+        <p id="confirmation" class="offscreen" aria-live="assertive"></p>
+    </main>
+</body>
+</html>
