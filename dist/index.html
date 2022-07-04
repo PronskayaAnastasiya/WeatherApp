@@ -13,13 +13,13 @@
 </head>
 <body>
     <main>
-        <h1>Погодное приложение, работающее на базе A P I</h1>
+        <h1 class="offscreen">Погодное приложение, работающее на базе A P I</h1>
         <section id="searchBar" class="searchBar">
             <form id="searchBar__form" class="searchBar__form" role="search">
-                <label for="searchBar__text">Введите местоположение</label>
+                <label for="searchBar__text" class="offscreen">Введите местоположение</label>
                 <input id="searchBar__text" class="searchBar__text" type="text" role="searchbox" size="40" 
                 autocomplete="off" placeholder="Страна, область, город">
-                <button id="searchBar__button" class="searchBar__button" title="Отправить местоположение" 
+                <button id="searchBar__button" class="searchBar__button button" title="Отправить местоположение" 
                 aria-label="Ввести почтовый индекс или страну, область, город, чтобы получить погодные условия">
                     <i class="fa fa-search"></i>
                     <i class="fas fa-sync fa-spin none"></i>
@@ -56,7 +56,7 @@
         </nav>
         <hr>
         <section id="dailyForecast" class="dailyForecast" role="region" aria-labelledby="dailyForecast__title">
-            <h2 id="dailyForecast__title" class="dailyForecast__title">Шестидневный прогноз</h2>
+            <h2 id="dailyForecast__title" class="dailyForecast__title offscreen">Шестидневный прогноз</h2>
             <div id="dailyForecast__contents" class="dailyForecast__contents"></div>
         </section>
         <p id="confirmation" class="offscreen" aria-live="assertive"></p>
